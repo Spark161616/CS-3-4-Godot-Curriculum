@@ -29,7 +29,7 @@ func configure_pickup() -> bool:
 			print("Unknown weapon type!")
 			return false
 func _ready():
-	print("gold coin created - worth " + str(value) + "   sence")
+	print("gold coin created - worth " + str(value) + "   sense")
 	body_entered.connect(_on_body_entered)
 
 func _process(delta: float) -> void:
@@ -39,7 +39,8 @@ func _process(delta: float) -> void:
 func _on_body_entered(body):
 	# Check if it's the player
 	if body is Player:
-		print("Player found gold coin! Sence is now "+str(Global.Sence))
-		#if auto_pickup:
-				#$AnimationPlayer.play("disappear")	
+		print("Player found gold coin! Sense is now ")
+		if auto_pickup:
+				$AnimationPlayer.play("disappear")	
 				#Elaborated in coin.gd
+		
