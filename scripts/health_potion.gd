@@ -30,6 +30,6 @@ func use_potion(player: Player):
 	"""Alternative method for manual potion use"""
 	if player.has_method("heal"):
 		player.heal(heal_amount)
-		$AnimationPlayer.play("disappear")
-		return true
+	$AnimationPlayer.play("disappear")
+	return true
 	return false

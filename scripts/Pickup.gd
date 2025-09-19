@@ -43,5 +43,6 @@ func _on_body_entered(body):
 		if auto_pickup:
 				$AnimationPlayer.play("disappear")	
 				#Elaborated in coin.gd
+		#if health_method
 		
 #
