@@ -1,15 +1,14 @@
-extends Area2D
+extends pickup
 class_name HealthPotion
 
 # Healing properties
-@export var heal_amount: int = 30
-@export var auto_pickup: bool = true
+var heal_amount: int = 30
 
 func _ready():
 	print("Health Potion created - heals " + str(heal_amount) + " HP")
 	# Connect the collision signal
 	body_entered.connect(_on_body_entered)
-
+	var auto_pickup: bool = true
 func _on_body_entered(body):
 	# Check if it's the player
 	if body is Player:
