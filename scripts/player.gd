@@ -23,16 +23,20 @@ func _ready():
 	print("Player is ready!")
 	# TODO: Add detailed character info display (Lesson 1)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	handle_movement()
 
 func handle_movement():
 	# Get input direction from arrow keys
+	#print("Handling movement")
 	var direction = Vector2.ZERO
 	direction.x = Input.get_axis("ui_left", "ui_right")
 	direction.y = Input.get_axis("ui_up", "ui_down")
+	#if Input.get_axis("ui_left", "ui_right"):
+		#print("x axis")
+	#if Input.get_axis("ui_up", "ui_down"):
+		#print("y axis")
 	handle_sprite(direction)
-	
 	# Normalize diagonal movement to prevent speed boost
 	if direction.length() > 0:
 		direction = direction.normalized()
@@ -40,12 +44,14 @@ func handle_movement():
 	# Apply movement using Godot's built-in physics
 	velocity = direction * move_speed
 	move_and_slide()
+	#Signals.player_position.emit(global_position)
 
 # BAD QUICK CODE MAYBE CHANGE
 func handle_sprite(direction: Vector2) -> void:
 	var prefix: String = "walk"
 	if direction == Vector2.ZERO:
 		prefix = "idle"
+		#print("idling")
 	else:
 		facing = direction
 	

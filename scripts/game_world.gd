@@ -5,8 +5,8 @@ class_name GameWorld
 @onready var player = $Player
 
 # Test objects for character methods
-@onready var spike = $Spike
-@onready var health_potion = $HealthPotion
+@onready var spike = $Tilemap/StuffOnTop/Spike
+@onready var health_potion = $Tilemap/StuffOnTop/HealthPotion
 
 func _ready():
 	print("=== GAME WORLD LOADED ===")

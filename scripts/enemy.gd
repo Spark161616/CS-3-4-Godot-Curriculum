@@ -1,5 +1,6 @@
 extends npc
-
+ 
+#var direction = (Player.position - position).normalised()
 func _ready():
 	print("enemy is ready")
 	is_hostile = true

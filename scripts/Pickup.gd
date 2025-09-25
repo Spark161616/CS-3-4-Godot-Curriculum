@@ -32,10 +32,6 @@ func _ready():
 	print("gold coin created - worth " + str(value) + "   sense")
 	body_entered.connect(_on_body_entered)
 
-func _process(delta: float) -> void:
-	# Set the color of the coin
-	$AnimatedSprite2D.material.set_shader_parameter("color", color)
-
 func _on_body_entered(body):
 	# Check if it's the player
 	if body is Player:
