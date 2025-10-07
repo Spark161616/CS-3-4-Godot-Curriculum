@@ -13,7 +13,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	super._physics_process(delta)
-	print(position)
+	#print(position)
 	pass
 	
 
@@ -29,6 +29,13 @@ func _on_detection_radius_body_exited(body: Node2D) -> void:
 		is_hostile=false
 		
 func _on_collision_with_player():
-	speed = 70
-	get_tree().create_timer(1.0).timeout
+	print("collison")
+	health -= 10
+	speed = 0
+	get_tree().create_timer(500).timeout
+	print("timer")
+	speed = 90
+	get_tree().create_timer(0.2).timeout
+	print("timer2")
 	speed = 100
+	

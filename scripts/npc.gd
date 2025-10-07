@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends Area2D
 class_name npc
 
 @onready var player: = %Player
@@ -16,7 +16,8 @@ class_name npc
 @export var target : Vector2
 
 func _ready() -> void:
-	print(player)
+	body_entered.connect(_on_body_entered)
+	#print(player)
 	pass
 
 func _physics_process(delta: float) -> void:
@@ -46,4 +47,6 @@ func movement(_delta):
 		if move_point > move_points.size()-1:
 			move_point = 0
 	
+	pass
+func _on_body_entered(body):
 	pass

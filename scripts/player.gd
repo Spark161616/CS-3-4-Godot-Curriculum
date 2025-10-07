@@ -79,6 +79,7 @@ func change_health(_amount):
 
 func die():
 	print("You died!")
+	get_tree().reload_scene()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
