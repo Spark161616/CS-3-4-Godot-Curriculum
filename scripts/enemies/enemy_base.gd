@@ -27,3 +27,8 @@ func _on_detection_radius_body_exited(body: Node2D) -> void:
 	super._on_detection_radius_body_exited(body)
 	if body is Player:
 		is_hostile=false
+		
+func _on_collision_with_player():
+	speed = 70
+	get_tree().create_timer(1.0).timeout
+	speed = 100
