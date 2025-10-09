@@ -6,7 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://bwd62n2s4k1j5" path="res://assets/point_light.webp" id="4_dqkch"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1a2b3"]
+<<<<<<< Updated upstream
 size = Vector2(21, 47)
+=======
+size = Vector2(23, 47)
+>>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yt4gq"]
 atlas = ExtResource("2_wn8rh")
