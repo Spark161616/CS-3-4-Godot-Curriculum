@@ -1,5 +1,5 @@
 extends npc
-class_name enemy_base
+
 @onready var sprite: Sprite2D = $Sprite2D
 
 
@@ -31,18 +31,11 @@ func _on_detection_radius_body_exited(body: Node2D) -> void:
 func _on_collision_with_player():
 	print("collison")
 	health -= 10
-	#speed = 0
-	#get_tree().create_timer(500).timeout
-	#print("timer")
-	#speed = 90
-	#get_tree().create_timer(0.2).timeout
-	#print("timer2")
-	#speed = 100
-	is_hostile = false
+	speed = 0
+	get_tree().create_timer(500).timeout
+	print("timer")
+	speed = 90
 	get_tree().create_timer(0.2).timeout
-	is_hostile = true
+	print("timer2")
+	speed = 100
 	
-
-
-func _on_damage_radius_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
