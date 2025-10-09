@@ -16,7 +16,6 @@ class_name npc
 @export var target : Vector2
 
 func _ready() -> void:
-	body_entered.connect(_on_body_entered)
 	#print(player)
 	pass
 
@@ -32,6 +31,7 @@ func _on_detection_radius_body_entered(body: Node2D) -> void:
 
 func _on_detection_radius_body_exited(body: Node2D) -> void:
 	pass # Replace with function body.
+	
 
 
 
