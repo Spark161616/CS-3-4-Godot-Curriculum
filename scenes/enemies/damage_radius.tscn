@@ -1,5 +1,8 @@
-[gd_scene format=3 uid="uid://cdt80kettfj6d"]
+[gd_scene load_steps=2 format=3 uid="uid://cdt80kettfj6d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_14ks3"]
 
 [node name="Damage Radius" type="Area2D"]
 
 [node name="Damage Radius" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_14ks3")
