@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=4 uid="uid://cpcjxr26k8tgw"]
 
-[ext_resource type="PackedScene" uid="uid://cqvpxnx2pwqhk" path="res://scenes/player.tscn" id="1_2j8vx"]
+[ext_resource type="PackedScene" uid="uid://dmhlor63tq1b1" path="res://scenes/player.tscn" id="1_2j8vx"]
 [ext_resource type="Script" uid="uid://bnk74kv0ariww" path="res://scripts/game_world.gd" id="2_3k9wy"]
 [ext_resource type="TileSet" uid="uid://wio17aw1fnr2" path="res://tilesets/dungeon.tres" id="3_fpihc"]
 [ext_resource type="PackedScene" uid="uid://clkh0aurm6cru" path="res://scenes/spike.tscn" id="4_j0bf8"]
@@ -83,6 +83,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -33.0
+offset_right = -48.0
+offset_bottom = -33.0
 grow_horizontal = 2
 grow_vertical = 2
 

@@ -6,7 +6,7 @@ class_name Player
 
 @export var move_speed: float = 200.0
 @export var maxHealth : int = 10
-@export var health : int = maxHealth
+@export var health : int = 5
 @export var coins : int = 0
 
 
@@ -15,7 +15,7 @@ var facing: Vector2 = Vector2.ZERO
 
 func _ready():
 	print("Player is ready!")
-	# TODO: Add detailed character info display (Lesson 1)
+	health = maxHealth
 
 func _physics_process(delta):
 	handle_movement()

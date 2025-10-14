@@ -16,7 +16,7 @@ class_name npc
 @export var target : Vector2
 
 func _ready() -> void:
-
+	
 	#print(player)
 	pass
 
