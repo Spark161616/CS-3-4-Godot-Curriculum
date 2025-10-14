@@ -33,7 +33,11 @@ func _on_detection_radius_body_entered(body: Node2D) -> void:
 func _on_detection_radius_body_exited(body: Node2D) -> void:
 	pass # Replace with function body.
 
-
+func _on_damage_radius_body_entered(body: Node2D) -> void:
+	pass
+	
+func _on_damage_radius_body_exited(body: Node2D) -> void:
+	pass
 
 func movement(_delta):
 	if is_hostile:

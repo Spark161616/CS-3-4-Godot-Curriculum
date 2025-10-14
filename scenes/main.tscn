@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=4 uid="uid://cpcjxr26k8tgw"]
 
-[ext_resource type="PackedScene" uid="uid://dmhlor63tq1b1" path="res://scenes/player.tscn" id="1_2j8vx"]
+[ext_resource type="PackedScene" uid="uid://cqvpxnx2pwqhk" path="res://scenes/player.tscn" id="1_2j8vx"]
 [ext_resource type="Script" uid="uid://bnk74kv0ariww" path="res://scripts/game_world.gd" id="2_3k9wy"]
 [ext_resource type="TileSet" uid="uid://wio17aw1fnr2" path="res://tilesets/dungeon.tres" id="3_fpihc"]
 [ext_resource type="PackedScene" uid="uid://clkh0aurm6cru" path="res://scenes/spike.tscn" id="4_j0bf8"]
@@ -92,4 +92,13 @@ grow_vertical = 2
 
 [node name="slime" parent="." instance=ExtResource("11_ya4ey")]
 position = Vector2(-496, 36)
+health = 10
+speed = 100
+is_hostile = false
 move_points = Array[Vector2]([Vector2(-500, 200), Vector2(-500, -75)])
+move_point = 0
+dialogue = Array[String]([])
+inventory = Array[String]([])
+inventory_drop = 0
+type = ""
+target = Vector2(0, 0)
