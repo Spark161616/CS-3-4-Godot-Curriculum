@@ -4,7 +4,6 @@ class_name Spike
 # Damage properties
 @export var damage_amount: int = -25
 @export var damage_cooldown: float = 1.0
-
 # Internal tracking
 var can_damage: bool = true
 

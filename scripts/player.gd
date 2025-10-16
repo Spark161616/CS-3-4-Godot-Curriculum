@@ -8,6 +8,7 @@ class_name Player
 @export var maxHealth : int = 50
 @export var health : int = 5
 @export var coins : int = 0
+@export var alive : bool = false
 
 
 var facing: Vector2 = Vector2.ZERO
@@ -79,7 +80,8 @@ func change_health(_amount):
 
 func die():
 	print("You died!")
-	get_tree().reload_scene()
+	alive = false
+	get_tree().reload_current_scene()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
