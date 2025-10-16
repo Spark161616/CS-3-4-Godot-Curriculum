@@ -4,17 +4,22 @@ class_name Spike
 # Damage properties
 @export var damage_amount: int = -25
 @export var damage_cooldown: float = 1.0
+var damage_timer: float = -1.0
 # Internal tracking
-var can_damage: bool = true
+var just_hit: bool = false
 
 func _ready():
 	print("Spike created - deals " + str(damage_amount) + " damage")
 	# Connect the collision signal
 	body_entered.connect(_on_body_entered)
 
+func _process(delta):
+	pass
+	
+
 func _on_body_entered(body):
 	# Check if it's the player and we can damage
-	if body is Player and can_damage:
+	if body is Player and damage_timer < 0:
 		print("Player touched spike! Dealing " + str(damage_amount) + " damage")
 		
 		if body.has_method("change_health"):
