@@ -1,5 +1,8 @@
 extends Area2D
 
+#if Input.is_key_pressed(KEY_A):
+	#pass
+	
 
 func play_animation(reverse: bool = false) -> void:
 	var speed: int
