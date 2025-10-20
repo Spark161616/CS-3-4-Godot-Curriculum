@@ -14,14 +14,14 @@ func _ready():
 	body_entered.connect(_on_body_entered)
 
 func _process(delta):
-	pass
+	damage_timer -= delta
 	
 
 func _on_body_entered(body):
 	# Check if it's the player and we can damage
 	if body is Player and damage_timer < 0:
 		print("Player touched spike! Dealing " + str(damage_amount) + " damage")
-		
+		damage_timer = 1.0
 		if body.has_method("change_health"):
 			body.change_health(damage_amount)
 		
@@ -32,7 +32,7 @@ func _on_body_entered(body):
 		
 		# Start cooldown to prevent spam damage
 		#can_damage = false
-		get_tree().create_timer(damage_cooldown).timeout.connect(_reset_damage_cooldown)
+		#get_tree().create_timer(damage_cooldown).timeout.connect(_reset_damage_cooldown)
 
 func _reset_damage_cooldown():
 	#can_damage = true

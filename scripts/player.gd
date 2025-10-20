@@ -6,7 +6,7 @@ class_name Player
 
 @export var move_speed: float = 200.0
 @export var maxHealth : int = 50
-@export var health : int = 5
+@export var health : int = 50
 @export var coins : int = 0
 @export var alive : bool = false
 
@@ -75,7 +75,6 @@ func change_health(_amount):
 		
 	elif health < 1:
 		die()
-		
 	print("Health: " + str(health))
 
 func die():
