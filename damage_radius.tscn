@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://br4eathtsjyfv"]
+[gd_scene load_steps=0 format=3 uid="uid://br4eathtsjyfv"]
 
 [node name="Damage Radius" type="Area2D"]
 
