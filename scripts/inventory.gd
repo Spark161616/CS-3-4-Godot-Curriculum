@@ -3,8 +3,9 @@ extends Resource
 
 class_name inventory_item
 
-#@export var description = string
-#@export var price
+@export var name: String
+@export var description: String
+@export var price = 1
 
 func add_item():
 	pass

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://de0oe88e5nd2l"]
+
+[ext_resource type="Script" uid="uid://bvsrvp3m7gjka" path="res://scripts/inventory_item.gd" id="1_g4kva"]
+
+[resource]
+script = ExtResource("1_g4kva")
+name = "Coin"
+description = "Shiny and coin-like"
+cost = 3
+color = Color(0.99999994, 0.7997524, 0.19900137, 1)

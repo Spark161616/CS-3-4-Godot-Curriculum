@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dubwllg425fgo"]
+
+[ext_resource type="Script" uid="uid://bvsrvp3m7gjka" path="res://scripts/inventory_item.gd" id="1_va2l3"]
+
+[resource]
+resource_name = "Potion"
+script = ExtResource("1_va2l3")
+name = "Potion?"
+description = "Mysterious yellow liquid"
+cost = -2
+color = Color(0.9252175, 0.8459478, 0.45106298, 1)
